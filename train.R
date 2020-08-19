@@ -1,3 +1,7 @@
+install.packages("data.table")
+install.packages("randomForest")
+install.packages("ggplot2")
+
 library(data.table)
 library(randomForest)
 library(ggplot2)
