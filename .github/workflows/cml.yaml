@@ -11,7 +11,7 @@ jobs:
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          Rscript reqs.R
+          Rscript requirements.R
           Rscript train.R
 
           echo "## Model metrics" > report.md
