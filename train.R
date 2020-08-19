@@ -18,6 +18,14 @@ rf_classify <- randomForest::randomForest(quality ~ .
                                           , mtry = 2
                                           , importance = TRUE)
 
+fileConn<-file("metrics.txt")
 
-#asdf
+writeLines(c(
+  
+  paste0("Mean of squared residuals: ", rf_classify$mse[length(rf_classify$mse)][1]),
+  paste0("% Var explained: ", rf_classify$rsq[length(rf_classify$rsq)][1])
+  
+), fileConn)
+
+close(fileConn)
 
