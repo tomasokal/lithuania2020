@@ -23,7 +23,7 @@ fileConn<-file("metrics.txt")
 writeLines(c(
   
   paste0("Mean of squared residuals: ", rf_classify$mse[length(rf_classify$mse)][1]),
-  paste0("% Var explained: ", rf_classify$rsq[length(rf_classify$rsq)][1])
+  paste0("% Variance explained: ", rf_classify$rsq[length(rf_classify$rsq)][1])
   
 ), fileConn)
 
